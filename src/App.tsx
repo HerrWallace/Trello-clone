@@ -1,6 +1,13 @@
+import { AppContainer } from "./styles"
+import { Column } from './Column';
 
 export const App = () => {
   return (
-    <div>test</div>
+    <AppContainer>
+      <Column />
+      <Column />
+      <Column />
+      <Column />
+    </AppContainer>
   )
 }
