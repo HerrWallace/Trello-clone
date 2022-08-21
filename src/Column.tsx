@@ -1,9 +1,16 @@
-import { ColumnContainer } from "./styles"
+import { ColumnContainer, ColumnTitle } from './styles';
 
-export const Column = () => {
+
+type ColumnProps = {
+  text: string,
+  children?: React.ReactNode
+}
+
+export const Column: React.FC<ColumnProps> = ({text, children}) => {
   return (
     <ColumnContainer>
-    Column
+      <ColumnTitle>{text}</ColumnTitle>
+      {children}
     </ColumnContainer>
   )
 }

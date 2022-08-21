@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   display: flex;
@@ -16,5 +16,8 @@ export const ColumnContainer = styled.div`
   border-radius: 3px;
   margin: 20px;
   padding: 10px;
-  
+`
+
+export const ColumnTitle = styled.div`
+  font-weight: bold;
 `
