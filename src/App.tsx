@@ -1,6 +1,7 @@
 import { AppContainer } from './styles'
 import { Column } from './Column';
 import { Card } from './Card';
+import { AddNewItem } from './AddNewItem';
 
 export const App = () => {
   return (
@@ -10,7 +11,7 @@ export const App = () => {
       </Column>
       <Column text='In progress'/>
       <Column text='Done'/>
-      <Column text='+ Add new'/>
+      <AddNewItem />
     </AppContainer>
   )
 }

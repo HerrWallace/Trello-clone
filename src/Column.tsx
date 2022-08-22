@@ -1,3 +1,4 @@
+import { AddNewItem } from './AddNewItem';
 import { ColumnContainer, ColumnTitle } from './styles';
 
 
@@ -11,6 +12,7 @@ export const Column = ({text, children}: ColumnProps) => {
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
       {children}
+      <AddNewItem />
     </ColumnContainer>
   )
 }
