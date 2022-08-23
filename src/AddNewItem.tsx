@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import { AddItemButton } from './styles'
+import { useState } from 'react';
+import { AddItemButton } from './styles';
 import { NewItemForm } from './NewItemForm';
 
-export const AddNewItem = () => {
-  const [showForm, setShowForm] = useState(false);
+type AddNewItemProps = {
+  itemAdd(text: string): void
+}
 
+export const AddNewItem = ({itemAdd}: AddNewItemProps) => {
+  const [showForm, setShowForm] = useState(false);
 
   if (showForm) {
     return (
-      <NewItemForm />
+      <NewItemForm 
+        onItemAdd={text => {
+          itemAdd(text)
+          setShowForm(false)
+        }} 
+      />
     )
   }
 

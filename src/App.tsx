@@ -11,7 +11,7 @@ export const App = () => {
       </Column>
       <Column text='In progress'/>
       <Column text='Done'/>
-      <AddNewItem />
+      <AddNewItem itemAdd={alert} />
     </AppContainer>
   )
 }

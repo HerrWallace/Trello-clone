@@ -12,7 +12,7 @@ export const Column = ({text, children}: ColumnProps) => {
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
       {children}
-      <AddNewItem />
+      <AddNewItem itemAdd={alert}/>
     </ColumnContainer>
   )
 }
