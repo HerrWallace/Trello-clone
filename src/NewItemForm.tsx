@@ -5,7 +5,7 @@ type NewItemFormProps = {
   onItemAdd(text: string): void
 }
 
-export const NewItemForm = ({onItemAdd}: NewItemFormProps) => {
+export const NewItemForm = ({ onItemAdd }: NewItemFormProps) => {
   const [text, setText] = useState('')
 
   return (

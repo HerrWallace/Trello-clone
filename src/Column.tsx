@@ -7,7 +7,7 @@ type ColumnProps = {
   children?: React.ReactNode
 }
 
-export const Column = ({text, children}: ColumnProps) => {
+export const Column = ({ text, children }: ColumnProps) => {
   return (
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
