@@ -1,16 +1,17 @@
 import { AppContainer } from './styles'
 import { Column } from './Column';
-import { Card } from './Card';
 import { AddNewItem } from './AddNewItem';
+import { useAppState } from './state/AppStateContext';
+
 
 export const App = () => {
+  const { lists } = useAppState()
+
   return (
     <AppContainer>
-      <Column text='To do'>
-        <Card text='Breakfast' />
-      </Column>
-      <Column text='In progress'/>
-      <Column text='Done'/>
+      {lists.map(list => (
+        <Column text={list.text} key={list.id} id={list.id} />
+      ))}
       <AddNewItem itemAdd={alert} />
     </AppContainer>
   )
